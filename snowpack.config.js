@@ -1,0 +1,37 @@
+/** @type {import("snowpack").SnowpackUserConfig } */
+module.exports = {
+  plugins: [
+    // '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-postcss',
+    '@snowpack/plugin-babel',
+    '@snowpack/plugin-typescript',
+  ],
+  installOptions: {
+    sourcemap: false,
+    // treeshake: true
+  },
+  devOptions: {
+    sourcemap: false,
+    fallback: 'public/index.html',
+  },
+  buildOptions: {
+    /* ... */
+  },
+  mount: {
+    src: '/dist',
+    'public/favicons': { url: '/', static: true, resolve: false },
+    public: { url: '/', static: false, resolve: false },
+  },
+  alias: {
+    components: './src/components',
+    '@app': './src',
+  },
+  experiments: {
+    optimize: {
+      bundle: true,
+      minify: true,
+      manifest: true,
+      target: 'es2018',
+    },
+  },
+};
