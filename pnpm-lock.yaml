@@ -22,8 +22,10 @@ devDependencies:
   postcss: 8.2.1
   postcss-cli: 8.3.1_postcss@8.2.1
   postcss-import: 14.0.0_postcss@8.2.1
+  postcss-mixins: 7.0.2_postcss@8.2.1
   postcss-nested: 5.0.3_postcss@8.2.1
   postcss-preset-env: 6.7.0
+  postcss-simple-vars: 6.0.2_postcss@8.2.1
   snowpack: 3.0.0-rc.2
   typescript: 4.1.3
 lockfileVersion: 5.2
@@ -2450,6 +2452,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-yjw2iKTpzzpM2nd9xNy8cTJJz3M=
+  /camelcase-css/2.0.1:
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
   /camelcase/5.3.1:
     dev: true
     engines:
@@ -5807,6 +5815,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ugA2wKonC0xeNHgirR4D3VWHs2JcU08WAi1KFLVcnb7IN89phID6Qtg2RIctWbnvp1TM2BOmDtX8GGLCKdR8YA==
+  /postcss-js/3.0.3:
+    dependencies:
+      camelcase-css: 2.0.1
+      postcss: 8.2.1
+    dev: true
+    engines:
+      node: '>=10.0'
+    resolution:
+      integrity: sha512-gWnoWQXKFw65Hk/mi2+WTQTHdPD5UJdDXZmX073EY/B3BWnYjO4F4t0VneTCnCGQ5E5GsCdMkzPaTXwl3r5dJw==
   /postcss-lab-function/2.0.1:
     dependencies:
       '@csstools/convert-colors': 1.4.0
@@ -5842,6 +5859,20 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-fo9moya6qyxsjbFAYl97qKO9gyre3qvbMnkOZeZwlsW6XYFsvs2DMGDlchVLfAd8LHPZDxivu/+qW2SMQeTHBw==
+  /postcss-mixins/7.0.2_postcss@8.2.1:
+    dependencies:
+      globby: 11.0.1
+      postcss: 8.2.1
+      postcss-js: 3.0.3
+      postcss-simple-vars: 6.0.2_postcss@8.2.1
+      sugarss: 3.0.3
+    dev: true
+    engines:
+      node: '>=10.0'
+    peerDependencies:
+      postcss: ^8.2.0
+    resolution:
+      integrity: sha512-er22AZ/2C1P+jZOL4ZExVEz0XuPWJWWy7SySbb2HWFmAgXG8F4qaOmMaRTdLfSK1AbgWxRT+KQ8GQ2i5kOn1aw==
   /postcss-modules-extract-imports/2.0.0:
     dependencies:
       postcss: 7.0.35
@@ -6043,6 +6074,16 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-gjMeXBempyInaBqpp8gODmwZ52WaYsVOsfr4L4lDQ7n3ncD6mEyySiDtgzCT+NYC0mmeOLvtsF8iaEf0YT6dBw==
+  /postcss-simple-vars/6.0.2_postcss@8.2.1:
+    dependencies:
+      postcss: 8.2.1
+    dev: true
+    engines:
+      node: '>=10.0'
+    peerDependencies:
+      postcss: ^8.2.1
+    resolution:
+      integrity: sha512-tABK0OVtCa88TgJjgosa/1aLgiF4hTJBJxUjVE5idTGA0597OVdzWZvbySAF+HKo/sZidxSSpnWhUycDrxO8LA==
   /postcss-value-parser/4.1.0:
     dev: true
     resolution:
@@ -6910,6 +6951,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
+  /sugarss/3.0.3:
+    dependencies:
+      postcss: 8.2.1
+    dev: true
+    engines:
+      node: '>=10.0'
+    resolution:
+      integrity: sha512-uxa2bbuc+w7ov7DyYIhF6bM0qZF3UkFT5/nE8AJgboiVnKsBDbwxs++dehEIe1JNhpMaGJc37wGQ2QrrWey2Sg==
   /supports-color/5.5.0:
     dependencies:
       has-flag: 3.0.0
@@ -7510,8 +7559,10 @@ specifiers:
   postcss: ^8.2.1
   postcss-cli: ^8.3.1
   postcss-import: ^14.0.0
+  postcss-mixins: ^7.0.2
   postcss-nested: ^5.0.3
   postcss-preset-env: ^6.7.0
+  postcss-simple-vars: ^6.0.2
   react: ^17.0.1
   react-dom: ^17.0.1
   snowpack: ^3.0.0-rc.2

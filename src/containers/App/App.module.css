@@ -1,4 +1,15 @@
 .app {
   color: rebeccapurple;
   font-size: 5rem;
+
+  @mixin screen-large {
+    background-color: red;
+  }
+
+  @mixin theme dark {
+    color: blue;
+  }
+}
+
+.test {
 }

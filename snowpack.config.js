@@ -7,11 +7,11 @@ module.exports = {
     '@snowpack/plugin-typescript',
   ],
   installOptions: {
-    sourcemap: false,
+    sourcemap: true,
     // treeshake: true
   },
   devOptions: {
-    sourcemap: false,
+    sourcemap: true,
     fallback: 'public/index.html',
   },
   buildOptions: {
@@ -23,8 +23,7 @@ module.exports = {
     public: { url: '/', static: false, resolve: false },
   },
   alias: {
-    components: './src/components',
-    '@app': './src',
+    '@src': './src',
   },
   experiments: {
     optimize: {

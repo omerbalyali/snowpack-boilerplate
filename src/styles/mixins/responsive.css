@@ -1,0 +1,36 @@
+@define-mixin screen-small {
+  @media (min-width: 640px) {
+    & {
+      @mixin-content;
+    }
+  }
+}
+@define-mixin screen-medium {
+  @media (min-width: 768px) {
+    & {
+      @mixin-content;
+    }
+  }
+}
+@define-mixin screen-large {
+  @media (min-width: 1024px) {
+    & {
+      @mixin-content;
+      color: red;
+    }
+  }
+}
+@define-mixin screen-xlarge {
+  @media (min-width: 1280px) {
+    & {
+      @mixin-content;
+    }
+  }
+}
+@define-mixin screen-xxlarge {
+  @media (min-width: 1536px) {
+    & {
+      @mixin-content;
+    }
+  }
+}

@@ -1,7 +1,21 @@
+const path = require('path');
 const autoprefixer = require('autoprefixer');
-const postCssImport = require('postcss-import');
-const postCssNested = require('postcss-nested');
+const postcssImport = require('postcss-import');
+const postcssMixins = require('postcss-mixins');
+const postcssNested = require('postcss-nested');
+const postcssSimpleVars = require('postcss-simple-vars');
 
 module.exports = {
-  plugins: [postCssImport, postCssNested, autoprefixer],
+  plugins: [
+    postcssImport(),
+    postcssMixins({
+      silent: true,
+      mixinsDir: path.resolve(__dirname, './src/styles/mixins'),
+    }),
+    postcssNested,
+    postcssSimpleVars({
+      silent: true,
+    }),
+    autoprefixer,
+  ],
 };
