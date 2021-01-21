@@ -11,11 +11,11 @@ module.exports = {
   },
   devOptions: {
     sourcemap: true,
-    fallback: 'public/index.html',
   },
   buildOptions: {
     /* ... */
   },
+  routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
   mount: {
     src: '/dist',
     'public/favicons': { url: '/', static: true, resolve: false },
