@@ -1,7 +1,13 @@
 .app {
   color: rebeccapurple;
+  color: white;
   font-size: 5rem;
 
+  border: 10px solid var(--variable);
+
+  @mixin screen-medium {
+    background-color: blue;
+  }
   @mixin screen-large {
     background-color: red;
   }

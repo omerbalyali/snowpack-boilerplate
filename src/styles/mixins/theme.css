@@ -1,5 +1,6 @@
 @define-mixin theme $theme {
-  [data-theme='$(theme)'] & {
+  [data-theme='$(theme)'] &,
+  [data-theme='$(theme)']& {
     @mixin-content;
   }
 }
