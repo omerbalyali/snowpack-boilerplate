@@ -1,14 +1,13 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   plugins: [
-    // '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-postcss',
     '@snowpack/plugin-babel',
     '@snowpack/plugin-typescript',
   ],
-  installOptions: {
+  packageOptions: {
     sourcemap: true,
-    // treeshake: true
   },
   devOptions: {
     sourcemap: true,
@@ -25,12 +24,12 @@ module.exports = {
   alias: {
     '@src': './src',
   },
-  experiments: {
-    optimize: {
-      bundle: true,
-      minify: true,
-      manifest: true,
-      target: 'es2018',
-    },
+  optimize: {
+    bundle: true,
+    minify: true,
+    manifest: true,
+    // treeshake: true,
+    // splitting: true,
+    target: 'es2017',
   },
 };

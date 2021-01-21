@@ -12,7 +12,7 @@ module.exports = {
       silent: true,
       mixinsDir: path.resolve(__dirname, './src/styles/mixins'),
     }),
-    postcssNested,
+    postcssNested(),
     postcssSimpleVars({
       silent: true,
     }),
