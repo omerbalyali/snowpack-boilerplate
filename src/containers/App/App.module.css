@@ -1,19 +1,18 @@
 .app {
-  color: rebeccapurple;
-  color: white;
+  color: crimson;
   font-size: 5rem;
 
   border: 10px solid var(--variable);
 
   @mixin screen-medium {
-    background-color: blue;
+    background-color: tan;
   }
   @mixin screen-large {
-    background-color: red;
+    background-color: salmon;
   }
 
   @mixin theme dark {
-    color: blue;
+    /* color: blue; */
   }
 }
 

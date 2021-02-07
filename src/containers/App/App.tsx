@@ -16,7 +16,7 @@ function App(props: AppProps) {
   return (
     <div
       className={clsx(styles.app)}
-      style={cssVar('variable', 'yellow')}
+      style={cssVar('variable', 'teal')}
       data-theme="dark">
       Hello
     </div>
